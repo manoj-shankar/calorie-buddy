@@ -1,0 +1,116 @@
+.container{
+    position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  text-align: center;
+}
+
+.col-lg-7{
+    /* background-color: wheat; */
+    height: 100%;
+
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+body{
+    width: 100%;
+  height: calc(100vh - 40px);
+  background: url(../img/hero1-bg.png) center bottom no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-top: 40px;
+  font-family: 'Open sans';
+}
+
+.table{
+    /* color: white; */
+     
+    font-family: "Roboto";
+    font-size: 20px;
+}
+.table-responsive{
+    padding-top: 10%;
+}
+.right{
+    color: #333;
+    font-weight: 500;
+    width: 50%;
+}
+.left{
+    font-family: 'Philosopher';
+    font-weight: 700;
+    text-align: left;
+}
+span{
+    color: #FFB600;
+    font-weight: 700;
+    font-size: 4rem;
+    
+}
+td{
+    color: #FFB600;
+    border-top-color: white;
+    
+}
+.back-btn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 11px 36px;
+    border-radius: 50px;
+    transition: 0.5s;
+    text-align: center;
+    margin-top: 8.5rem;
+    border: 2px solid ;
+    background: #fff;
+    color: #FFB600  ;
+    text-decoration : none;
+  
+    
+}
+.col-lg-5{
+    
+}
+.back-btn:hover{
+    background: rgb(240, 203, 109);
+    color: #fff;
+}
+.buttons{
+    padding-top: 5rem;
+}
+.btn{
+    width: 100px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.col-lg-6 img{
+
+    max-width: 300px;
+    max-height: 300px;
+    /* padding-top: 10%; */
+    margin-top: 10%;
+    border-radius: 30px;
+   
+    
+
+/*     
+    text-align: center; 
+    justify-content: center;
+    align-items: center; */
+}
+.elements{
+    margin: 0 auto;
+}

@@ -1,0 +1,364 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}calorieBuddy{% endblock %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='vendor/animate.css/animate.min.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='vendor/font-awesome/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='vendor/modal-video/css/modal-video.min.css')}}">
+<!-- <link rel="stylesheet" href="{{url_for('.static', filename='vendor/owl.carousel/assets/owl.carousel.min.css')}}"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dropzone@5.2.0/dist/min/dropzone.min.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/dropzone@5.2.0/dist/dropzone.min.js"></script>
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts  -->
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i"
+  rel="stylesheet">
+{% endblock %}
+{%block head %}
+{{ super ()}}
+<script>
+  Dropzone.options.myDropzone = {
+    init: function () {
+      this.on("queuecomplete", function (file) {
+        // Called when all files in the queue finish uploading.
+        window.location = "/results";
+      });
+    },
+    uploadMultiple: false,
+    // parallelUploads: 2,
+    paramName: "file", // The name that will be used to transfer the file
+    maxFilesize: 16, // MB
+    acceptedFiles: "image/*",
+    maxFiles: null,
+    dictDefaultMessage: "Drop the images here or click to upload.", // message display on drop area
+    dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
+    dictInvalidFileType: "You can't upload files of this type.",
+    dictFileTooBig: "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB.",
+    dictResponseError: "Server error: {{statusCode}}",
+    dictMaxFilesExceeded: "You can't upload any more files.",
+    dictCancelUpload: "Cancel upload",
+    dictRemoveFile: "Remove file",
+    dictCancelUploadConfirmation: "You really want to delete this file?",
+    dictUploadCanceled: "Upload canceled",
+    // timeout
+  };
+</script>
+
+{%endblock%}
+{% block body %}
+<!-- ======= Header ======= -->
+<header id="header" class="header header-hide">
+  <div class="container">
+
+    <div id="logo" class="pull-left">
+      <!-- <h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="#body"><img src="{{url_for('.static', filename='img/logo.png')}}" alt="" title="" class="logo" /></a>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active"><a href="#hero">Home</a></li>
+        <li><a href="#about-us">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Gallery</a></li>
+        <li><a href="#team">Team</a></li>
+
+      </ul>
+    </nav><!-- #nav-menu-container -->
+  </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="wow fadeIn">
+  <div class="hero-container">
+    <h1>Welcome to <img src="{{url_for('.static', filename='img/logo.png')}}" alt=""
+        style="width: 22 0px; height: 50px; margin-bottom: 1%;"></h1>
+    <h2>An AI based food recognition website</h2>
+    <img src="{{url_for('.static', filename='img/hero.png')}}" alt="Hero Imgs" class="hero-pic">
+    <a href="#get-started" class="btn-get-started scrollto">Get Started -></a>
+  </div>
+</section><!-- End Hero Section -->
+
+<main id="main">
+
+  <!-- ======= Get Started Section ======= -->
+  <section id="get-started" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>What is calorieBuddy about? </h2>
+        <!-- <p class="separator">-------------------------------</p> -->
+        <br>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 col-sm-12">
+          <div class="feature-block">
+
+            <img src="{{url_for('.static', filename='img/svg/cl-seflie.png')}}" alt="img" class="upload">
+            <h4>Instant food recognition</h4>
+            <p>upload a pic of the food you are eating to know about the nutrional content about it,
+              caloriebuddy uses AI to recognise the type of the food.</p>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/sambar.png')}}" alt="img" class="sambar">
+            <h4>Sambar? no problem</h4>
+            <p>calorieBuddy can recognize most of the indian foods,and more food categories are being added everyday</p>
+
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="{{url_for('.static', filename='img/svg/ui.png')}}" alt="img" class="ui">
+            <h4>user friendly UI</h4>
+            <p>calorieBuddy is made to be used by anyone,our Ui is made sure that it is legible and responsive in
+              various platforms </p>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Get Started Section -->
+  <!-- ======= About Us Section ======= -->
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5 col-lg-3">
+          <img src="{{url_for('.static', filename='img/about-img.png')}}" alt="About">
+        </div>
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+            <h2><span>About calorieBuddy</span></h2>
+            <p style="font-weight: 500; font-size: 20px;">How to use calorieBuddy?</p>
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>Visit our website</li>
+              <li><i class="fa fa-angle-right"></i>Upload a pic of your food</li>
+              <li><i class="fa fa-angle-right"></i>And voila! You'll get to know about your food</li>
+              <li><i class="fa fa-angle-right"></i>And yea it is that simple :) </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Us Section -->
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Amazing Features.</h2>
+        <p class="separator">Here are the features that make our app unique</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/simple.png')}}" alt="img" class="img-fluid">
+            <h4>Simplicity</h4>
+            <p>Our product is so simple to use even without any prior knowledge in using our product, UI made sure of that</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/like.png')}}" alt="img" class="img-fluid">
+            <h4>Reliability</h4>
+            <p>Reliability is the key to success, so the information provided in our product is 100% legit</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/mobile.png')}}" alt="img" class="img-fluid">
+            <h4>Fewer Taps</h4>
+            <p>UX is as important as UI,So our product is designed in such a way that you can arrive the result in just a few taps </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/ui.png')}}" alt="img" class="img-fluid">
+            <h4>Consistency</h4>
+            <p>The UI and UX is same across different platforms</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/speed.png')}}" alt="img" class="img-fluid">
+            <h4>Speed</h4>
+            <p>Our Product is tuned in a way that it provides you with the solution in seconds</p>
+          </div>
+        </div> 
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+            <img src="{{url_for('.static', filename='img/svg/ai.png')}}" alt="img" class="img-fluid">
+            <h4>AI Powered</h4>
+            <p>Our product uses an advanced AI algorithm and trained with more than 1000images per class to provide an accurate result</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Features Section -->
+
+  <!-- ======= Screenshots Section ======= -->
+  <section id="screenshots" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Gallery</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="carouselExampleSlidesOnly" class="carousel slide " data-ride="carousel" data-interval="3000"
+        data-hover="pause">
+        <div class="carousel-inner shadow-lg  ">
+          <div class="carousel-item active">
+            <img src="{{url_for('.static', filename='img/carousel/1.png')}}" alt="" class="cr-img">
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('.static', filename='img/carousel/2.png')}}" alt="" class="cr-img">
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('.static', filename='img/carousel/3.png')}}" alt="" class="cr-img">
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('.static', filename='img/carousel/4.png')}}" alt="" class="cr-img">
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- <div class="row"> -->
+      <!-- <div class="col-lg-12"> -->
+      <div class="dropbox">
+        <div class="section-title text-center">
+          <h2 style="margin-top: 40px;">Test Our Product here</h2>
+        </div>
+        <div class="dropbox-inner">
+          <form action="/" method="post" class="dropzone" id="myDropzone" enctype="multipart/form-data"><img
+              class="dropbox-img" src="{{url_for('.static', filename='img/dropbox-img.png')}}" alt="image not"></form>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+
+
+  </section><!-- End Screenshots Section -->
+
+
+  <style>
+    .dropbox-img {
+      height: 90px;
+      width: 100x;
+      margin-top: 60px;
+    }
+
+    .dropzone span {
+      color: #FFB600;
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      margin-right: auto;
+      margin-top: 30px;
+    }
+
+    .dropzone {
+      height: 400px;
+      width: 100%;
+      color: black;
+      background-color: white;
+      border: 30x;
+      border-color: black;
+      border-radius: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .dropzone:hover {
+      opacity: 80%;
+      color: black;
+    }
+
+    .dropzone.dz-drag-hover {
+      /* border-style: solid; */
+      opacity: 95%;
+    }
+
+    .dropbox {
+      margin-top: 120px;
+    }
+
+    .dropbox-inner {
+      margin-top: 100px;
+    }
+  </style>
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Brought to you by</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6   " style="margin-left: auto; margin-right: auto;">
+          <div class="our-team">
+            <div class="pic">
+              <img src="{{url_for('.static', filename='img/team/2.jpg')}}">
+              <ul class="social">
+                <li><a href="https://github.com/manoj-shankar" class="fa fa-github"></a></li>
+                <li><a href="https://www.instagram.com/manoj_.shankar/" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.linkedin.com/in/manoj-shankar-c/" class="fa fa-linkedin"></a></li>
+              </ul>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Manoj Shankar</h3>
+              <span class="post">Data Scientist & Full stack Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Team Section -->
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <script src="{{url_for('.static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('.static', filename='vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{url_for('.static', filename='vendor/superfish/superfish.min.js')}}"></script>
+  <!-- <script src="{{url_for('.static', filename='vendor/owl.carousel/owl.carousel.min.js')}}"></script> -->
+  <script src="{{url_for('.static', filename='vendor/hoverIntent/hoverIntent.js')}}"></script>
+  <script src="{{url_for('.static', filename='vendor/wow/wow.min.js')}}"></script>
+  <script src="{{url_for('.static', filename='vendor/modal-video/js/modal-video.min.js')}}"></script>
+  <script src="{{url_for('.static', filename='js/main.js')}}"></script>
+
+
+  {% endblock%}
