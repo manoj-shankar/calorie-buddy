@@ -1,0 +1,73 @@
+ID,NAME,CALORIES,FAT,CHOLESTROL,CARBOHYDRATES,FIBER,PROTEIN
+Alu_Gobi ,Alu Gobi ,111,5.5,0,15,2.8,2.5
+Bajji,Bajji,115,8.4,3.3,8.6,1.2,1.9
+Alu_Matar,Aloo Matar,150,7,3,19,2,4
+Bonda,Bonda,60,2.7,0.4,7.7,0.3,1.2
+Bread_Pudding,Bread Pudding,377,74,190,72,1.2,7.7
+Burger,Burger,540,27,122,40,0,34
+Butter_Chicken,Butter Chicken,355,23,92,14,2,23
+Carrot_Halwa,Carrot Halwa,275,13,30,35,2.2,5.6
+Chaat_Papri,Papdi Chaat,353,17.1,16,36.2,1.8,7.6
+Chana_Masala,Channa Masala,281,16,0,29,7.6,7.7
+Chicken_65,Chicken 65,260,14,80,10,0,22
+Chicken fried rice,Chicken fried rice,320,7,85,42,4,22
+Chapati,Chapati,120,3.7,0,18,3.9,3.1
+Chicken_Biriyani,Chicken Biriyani,292,9.4,48,31,1.4,20
+Chili_Chicken,Chili Chicken,277,12,90,21,2.8,21
+Chocolate_cake,Chocolate cake,424,22,24,58,2.4,3.8
+Club_Sandwich,Club Sandwich,817,46,203,42,3.2,56
+Coconut_Chutney,Coconut Chutney,60,4,0,4,1,1
+Coffee,Coffee,2.4,0.1,0,0,0,0.3
+Coriander_Chutney,Coriander Chutney,20,0,0,3,1,1
+Cup_Cakes,Cup Cakes,292,15,17,40,1.7,2.6
+Dhokla,Dhokla,152,7.4,3.3,16,2.5,5.7
+Donuts,Donuts,253,14,18,29,1.3,3.7
+Fish_Fry,Fish Fry,199,12,62,7,0.6,16
+Fish_Gravy,Fish Gravy,217,2.8,83,12,0,37.2
+French_Fries,French Fries,365,17,0,48,4.4,4
+Idili,Idili,58,0.4,0,12,0.5,1.6
+Jalebi,Jalebi,150,3.5,8.5,29,0.4,1.3
+Kheema,Kheema,489,32,90,19,5.7,32
+Kheer,Kheer,131,5.3,9.5,17,0.4,4.2
+Waffles,Waffles,218,,52,25,0,5.9
+Sandwich,Sandwich,155,1.9,0,28,2.3,6.2
+Tea,Tea,1.8,0,0,0.5,0,0
+Gulab_Jamun,Gulab Jamun,149,7.3,5.5,20,0.1,1.9
+Uthapam,Uthapam,92,2.8,0,14.2,1.5,17.9
+Garlic_Bread,Garlic Bread,151,7.1,0,18,1.1,3.6
+Soup,Soup,62,2.4,12,7.3,0.5,3.1
+Tomato_Chutney,Tomato Chutney,34,0.1,0,7.7,0.5,0.3
+Vegetable_Gravy,Vegetable Gravy,150,9.3,15,13.3,4.8,3.3
+Masoor_Dal,Masoo  Dal,135,3.6,0,18.3,3.8,7.2
+Hot_Dog,Hot Dog,155,14,28,1.3,0,5.6
+Lasagna,Lasagna,602,32,166,35,3.9,44
+Ice_Cream,Ice Cream,273,15,58,31,0.9,4.6
+Lamb_Vindaloo,Lamb Vindaloo,390,16,55,39,5,21
+Ladoo,Ladoo,211,11,26,24,2,4.2
+Lassi,Lassi,130,2.1,7.8,22,0.2,6.9
+Maili_Kofta,Maili Kofta,359,24,0,26,2.4,9
+Kulfi,Kulfi,184,7.6,17,25,0.2,4.8
+Masala_Dosa,Masala Dosa,168,3.7,0,29,0.9,3.9
+Navratan_Korma,Navratan Korma,226,16.2,0,14.3,3.3,6.1
+Noodles,Noodles,196,1.2,0,38,2.2,7.2
+Omlette,Omlette,94,7,191,0,0,6
+Paneer_Butter_Masala,Paneer Butter Masala,229,19,8,4.7,0.9,8.8
+Paneer_Tikka,Paneer Tikka,201,16,41,6.9,1.5,8.2
+Onion_Pakora,Onion Pakora,80,4.8,0,8.2,0.4,1.1
+Medu_Vada,Medu Vada,135,8.4,0,11,2,4.4
+Pancakes,Pancakes,91,3.9,24,11,0,2.6
+Naan,Naan,262,5.1,0,45,2,8.7
+Papadum,Papadum,30,1.1,0,3.4,0.7,1.3
+Parotta,Parotta,258,10,0.8,36,7.6,5
+Pizza,Pizza,285,10,18,36,2.5,12
+Poori,Poori,141,9.8,0,12,1.8,2.3
+Prawn_Fry,Prawn Fry,121,5.1,0,17,1.6,2
+Pulao,Pulao,261,8.1,9.4,42,0.8,4.1
+Puttu,Puttu,305,9.5,0,49.8,5.5,5.1
+Ras_Malai,Ras Malai,220,7.7,15,33,0.7,6
+Raita,Raita,31,1.6,5.9,2.7,0.2,1.8
+Rajma,Rajma,252,6.5,4.2,38,9.3,13
+Red_Velvet_Cake,Red Velvet Cake,368,23,93,36,0.3,4.2
+Roti,Roti,120,3.7,0,18,3.9,3.1
+Sambar,Sambar,260,1.3,0,53,15,14
+Samosa,Samosa,262,17,27,24,2.1,3.5

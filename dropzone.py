@@ -16,6 +16,8 @@ import io
 import requests
 from keras.applications.inception_v3 import preprocess_input
 from keras.backend import set_session
+import pandas as pd 
+
 # session set and model importing
 sess = tf.Session()
 set_session(sess)
@@ -24,14 +26,14 @@ graph = tf.get_default_graph()
 # loading classes txt
 classes = {}
 ix_to_class = {}
-with open('D:/Cloud/upload/classes.txt', 'r') as line:
+with open('classes.txt', 'r') as line:
     classes = [l.strip() for l in line.readlines()]
     classes = dict(zip(classes, range(len(classes))))
     ix_to_class = dict(zip(range(len(classes)), classes))
     classes = {v: k for k, v in ix_to_class.items()}
 sorted_classes = collections.OrderedDict(sorted(classes.items()))
 min_side =299
-
+data = pd.read_csv('calories.csv')
 
 app = Flask(__name__)
 dropzone = Dropzone(app)
@@ -146,7 +148,15 @@ def results():
         top_n_preds= np.argpartition(y_pred, -top_n)[:,-top_n:]
         # print(upload_image)
     food_name = list(classes.keys())[list(classes.values()).index(preds[1])]
-    return render_template('results.html', file_urls=file_urls[0] ,name = food_name )
+    data1 = data[data['ID'] == food_name]
+    name = data1['NAME'].to_string(index = False)
+    calories = data1['CALORIES'].to_string(index = False)
+    fat = data1['FAT'].to_string(index = False)
+    cholestrol = data1['CHOLESTROL'].to_string(index = False)
+    carb = data1['CARBOHYDRATES'].to_string(index = False)
+    fiber = data1['FIBER'].to_string(index = False)
+    protein = data1['PROTEIN'].to_string(index = False)
+    return render_template('results.html', file_urls=file_urls[0] ,name = name ,cal = calories,fat = fat,cholestrol = cholestrol,carbohydrates = carb , fiber = fiber,protein = protein)
 
 if __name__ == "__main__":
     app.run(debug=True , port = "5051")

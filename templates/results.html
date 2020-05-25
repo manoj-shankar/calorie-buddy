@@ -23,7 +23,7 @@ rel="stylesheet">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h1>The food you are enjoying : <br> <span>{{ name }}</span></h1>
+                <h1>The food you are enjoying : <br> <span>{{ name }} !</span></h1>
             </div>
             <div class="col-lg-6">
                 <img src="{{ file_urls }}" alt="" class="image">
@@ -34,27 +34,27 @@ rel="stylesheet">
                         <tbody>
                             <tr>
                                 <td class="right">Calories:</td>
-                                <td>.....</td>
+                                <td>{{ cal}} kcal</td>
                             </tr>
                             <tr>
                                 <td class="right">Protein:</td>
-                                <td>.....</td>
+                                <td>{{protein}} g</td>
                             </tr>
                             <tr>
                                 <td class="right">Carbohydrates:</td>
-                                <td>.....</td>
+                                <td>{{carbohydrates}} g</td>
                             </tr>
                             <tr>
                                 <td class="right">Fiber:</td>
-                                <td>.....</td>
+                                <td>{{fiber}} g</td>
                             </tr>
                             <tr>
                                 <td class="right"> Fat:</td>
-                                <td>.....</td>
+                                <td>{{fat}} g</td>
                             </tr>
                             <tr>
                                 <td class="right">Cholestrol:</td>
-                                <td>.....</td>
+                                <td>{{cholestrol}} mg</td>
                             </tr>
                         </tbody>
                     </table>
