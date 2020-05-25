@@ -1,0 +1,11 @@
+Flask==1.0.2
+Flask_Uploads==0.2.1
+Flask_Dropzone==1.5.4
+tensorflow_cpu==2.1.0
+requests==2.11.1
+Flask_Bootstrap==3.3.7.1
+numpy==1.18.2
+pandas==0.24.2
+Keras==2.3.1
+Pillow==7.1.2
+tensorflow==2.2.0

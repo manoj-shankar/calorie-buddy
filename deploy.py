@@ -82,7 +82,7 @@ def index():
         session['file_urls'] = file_urls
         return "uploading..."
     # return dropzone template on GET request    
-    return render_template('index1.html')
+    return render_template('index.html')
 
 
 @app.route('/results')
