@@ -158,5 +158,4 @@ def results():
     protein = data1['PROTEIN'].to_string(index = False)
     return render_template('results.html', file_urls=file_urls[0] ,name = name ,cal = calories,fat = fat,cholestrol = cholestrol,carbohydrates = carb , fiber = fiber,protein = protein)
 
-if __name__ == "__main__":
-    app.run(debug=True , port = "5051")
+
