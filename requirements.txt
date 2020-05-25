@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-Flask==1.0.2
-Flask_Uploads==0.2.1
-Flask_Dropzone==1.5.4
-tensorflow_cpu==2.1.0
-requests==2.20.0
-Flask_Bootstrap==3.3.7.1
-numpy==1.18.2
-pandas==0.24.2
-Keras==2.3.1
-Pillow==7.1.2
-
-=======
 Flask==1.0.2
 Flask_Uploads==0.2.1
 Flask_Dropzone==1.5.4
@@ -22,5 +9,3 @@ pandas==0.24.2
 Keras==2.3.1
 Pillow==7.1.2
 gunicorn
-
->>>>>>> 6f6de830e36dc25c111b82db28687f3ceab02e39
