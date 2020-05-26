@@ -35,27 +35,27 @@ sorted_classes = collections.OrderedDict(sorted(classes.items()))
 min_side =299
 data = pd.read_csv('calories.csv')
 
-app = Flask(__name__)
-dropzone = Dropzone(app)
-Bootstrap(app)
+application = Flask(__name__)
+dropzone = Dropzone(application)
+Bootstrap(application)
 
-app.config['SECRET_KEY'] = 'supersecretkeygoeshere'
+application.config['SECRET_KEY'] = 'supersecretkeygoeshere'
 
 # Dropzone settings
-app.config['DROPZONE_UPLOAD_MULTIPLE'] = False
-app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
-app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
-app.config['DROPZONE_REDIRECT_VIEW'] = 'results'
+application.config['DROPZONE_UPLOAD_MULTIPLE'] = False
+application.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
+application.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
+application.config['DROPZONE_REDIRECT_VIEW'] = 'results'
 
 # Uploads settings
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
+application.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
 
 photos = UploadSet('photos', IMAGES)
-configure_uploads(app, photos)
-patch_request_class(app)  # set maximum file size, default is 16MB
+configure_uploads(application, photos)
+patch_request_class(application)  # set maximum file size, default is 16MB
 
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
     
     # set session for image results
@@ -85,7 +85,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/results')
+@application.route('/results')
 def results():
     
     # redirect to home if no images to display
@@ -159,3 +159,5 @@ def results():
     return render_template('results.html', file_urls=file_urls[0] ,name = name ,cal = calories,fat = fat,cholestrol = cholestrol,carbohydrates = carb , fiber = fiber,protein = protein)
 
 
+if __name__ == "__main__": 
+        application.run() 
